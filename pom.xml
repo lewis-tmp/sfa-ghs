@@ -23,14 +23,9 @@
 		<oracle.version>10.2.0</oracle.version>
 		<c3p0.version>0.9.5.1</c3p0.version>
 
-		<kafka.aritfactId>kafka_2.10</kafka.aritfactId>
-		<kafka.version>0.8.2.1</kafka.version>
 		<sf.kafka.version>1.11</sf.kafka.version>
-
 		<sf.fvp-dto.version>0.0.2</sf.fvp-dto.version>
 		<protostuff.version>1.0.9</protostuff.version>
-		<jsoup.version>1.8.3</jsoup.version>
-		<jackson.version>2.6.1</jackson.version>
 
 		<log4j.version>1.2.17</log4j.version>
 		<junit.version>4.12</junit.version>
@@ -114,21 +109,9 @@
 
 			<!-- SF Kafka API -->
 			<dependency>
-				<groupId>com.sf.kafka.api</groupId>
+				<groupId>com.sf.kafka</groupId>
 				<artifactId>sf-kafka-api-core</artifactId>
 				<version>${sf.kafka.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.sf.kafka.api</groupId>
-				<artifactId>sf-kafka-api-check-valid</artifactId>
-				<version>${sf.kafka.version}</version>
-			</dependency>
-
-			<!-- Kafka -->
-			<dependency>
-				<groupId>org.apache.kafka</groupId>
-				<artifactId>${kafka.aritfactId}</artifactId>
-				<version>${kafka.version}</version>
 			</dependency>
 
 			<!-- SF FVP DTO -->
@@ -148,21 +131,6 @@
 				<groupId>com.dyuproject.protostuff</groupId>
 				<artifactId>protostuff-runtime</artifactId>
 				<version>${protostuff.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jsoup</groupId>
-				<artifactId>jsoup</artifactId>
-				<version>${jsoup.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.fasterxml.jackson.core</groupId>
-				<artifactId>jackson-core</artifactId>
-				<version>${jackson.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.fasterxml.jackson.core</groupId>
-				<artifactId>jackson-databind</artifactId>
-				<version>${jackson.version}</version>
 			</dependency>
 
 			<!-- Log4j -->

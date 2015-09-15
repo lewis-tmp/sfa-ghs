@@ -25,13 +25,14 @@ public class ConsumerRefreshedBean implements ApplicationListener<ContextRefresh
 
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
-		log.info("Register Kafka Byte Array Message Consumer Listener...");
+		log.info("[Refreshed Spring Context], Register Kafka Byte Array Message Consumer Listener...");
+
 		try {
 			ConsumeOptionalConfig optionalConfig = new ConsumeOptionalConfig();
-			optionalConfig.setAutoOffsetResetMinute(100);
 			optionalConfig.setAutoOffsetReset(AutoOffsetReset.CUSTOM);
+			optionalConfig.setAutoOffsetResetMinute(10 * 60);
 
-			KafkaConsumerRegister.registerByteArrayConsumer(cfg, byteArrayListener);
+			KafkaConsumerRegister.registerByteArrayConsumer(cfg, byteArrayListener, optionalConfig);
 			log.info("Register Kafka Byte Array Message Consumer Listener success.");
 		} catch (KafkaException e) {
 			log.error("Register Kafka Byte Array Message Consumer Listener failed.", e);

@@ -11,13 +11,5 @@ public class MainApp {
 	public static void main(String[] args) {
 		// 1. Spring容器初始化
 		AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-
-		// ctx.start();
-		//
-		// ctx.stop();
-		//
-		// ctx.refresh();
-		//
-		// ctx.close();
 	}
 }
